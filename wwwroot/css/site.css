@@ -1,0 +1,308 @@
+﻿/* Please see documentation at https://docs.microsoft.com/aspnet/core/client-side/bundling-and-minification
+for details on configuring this project to bundle and minify static web assets. */
+
+a.navbar-brand {
+  white-space:normal;
+  /* text-align: center; */
+  /* word-break: break-all; */
+}
+
+/* Provide sufficient contrast against white background */
+a {
+  /* color: #0366d6; */
+  text-decoration: none;
+}
+
+/* .btn-primary { */
+  /* color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac; */
+/* } */
+
+/* .nav-pills .nav-link.active, .nav-pills .show > .nav-link { */
+  /* color: #fff;
+  background-color: #1b6ec2;
+  border-color: #1861ac; */
+/* } */
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  font-size: 14px;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+.border-top {
+  border-top: 1px solid #e5e5e5;
+}
+.border-bottom {
+  border-bottom: 1px solid #e5e5e5;
+}
+
+.box-shadow {
+  box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05);
+}
+
+button.accept-policy {
+  font-size: 1rem;
+  line-height: inherit;
+}
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  white-space: nowrap;
+  line-height: 60px; /* Vertically center the text there */
+}
+
+/* background-color: forestgreen;
+background-color: palegreen;
+background-color: olivedrab; */
+
+
+* { 
+  height: auto;
+  width: auto;
+  margin: 0px auto;
+  padding: 0px;
+  
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  /* border: .25px solid rgb(129, 173, 158); */
+  /* background-color: oldlace; */
+}
+
+.wholePage{
+  /* background-color: teal; */
+  height: 100%;
+  width: 100%;
+}
+
+body{
+  background-color:olivedrab;
+}
+
+/* LOGIN/REGISTER CSS */
+
+.canvas{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  color: whitesmoke;
+  /* border: 2px solid green; */
+  /* background-color: blue; */
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.buildInfo{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  width: 100%;
+  /* border: 2px solid green; */
+  /* background-color: blue; */
+  color: whitesmoke;
+  margin: 10px;
+  padding-bottom: 10px;
+}
+
+.loginRegEntry{
+  height: fit-content;
+  /* border: 5px solid green; */
+  margin: 10px;
+  padding: 10px;
+  /* background-color: chartreuse; */
+}
+
+
+.pendingResident{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  /* color: whitesmoke; */
+  margin-top: 15px;
+}
+
+.successText{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: whitesmoke;
+  margin-top: 10px;
+}
+#successText >h3{
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  color: whitesmoke;
+}
+
+/* DASHBOARD CSS */
+.navbar{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: lightgreen;
+  align-items:center;
+  margin: 0px;
+  width: 100%;
+  /* white-space:normal; */
+  /* text-decoration: none; */
+  padding: 5px;
+  -webkit-box-shadow: 6px 5px 13px -2px #000000; 
+  box-shadow: 6px 5px 13px -2px #000000;
+}
+
+#navButtons > *{
+  /* display: flex; */
+  justify-content: space-around;
+  -webkit-box-shadow: 6px 5px 13px -2px #000000; 
+  box-shadow: 6px 5px 13px -2px #000000;
+}
+
+#dashboardLayout{
+  /* border: .25px solid aquamarine; */
+  display: flex;
+  justify-content: flex-start;
+  height: 100%;
+  width: 100%;
+}
+
+.infoCol{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  border-radius: 10px;
+  margin: 10px 5px;
+  padding: 10px;
+  height: 100%;
+  width: 100%;
+  -webkit-box-shadow: 6px 5px 13px -2px #000000; 
+  box-shadow: 6px 5px 13px -2px #000000;
+  background-color: forestgreen;
+}
+
+
+#liveChatCol{
+  flex: 1;
+}
+
+#liveChatCol > .textCol{
+  background-color: palegreen;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0px;
+}
+
+#messagesCol{
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  align-self: flex-start;
+  margin: 0px;
+}
+
+#messagesList{
+  display: flex;
+  max-height:300px;
+  overflow-y:auto;
+  justify-content: flex-start;
+  flex-direction: column;
+  scroll-behavior: auto;
+  text-align: left;
+}
+#messagesList > * {
+  display: flex;
+  flex-direction: column;
+  text-align: left;
+  justify-content: flex-start;
+  align-self: flex-start;
+  width: 100%;
+  /* width:80%; */
+  list-style-type: none;
+  /* text-overflow: clip; */
+  margin: 0 auto;
+  padding: 2px 5px;
+  max-width:400px;
+  scroll-behavior: auto;
+  /* max-height:600px; */
+}
+
+#buildingEventsCol{
+  flex: 3;
+}
+
+#buildingEventsCol > .textCol{
+  background-color: palegreen;
+  width: fit-content;
+}
+
+#postsCol{
+  flex: 2;
+  align-items: center;
+}
+
+#postsCol > .textCol{
+  background-color: palegreen;
+}
+
+.textCol{
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  padding: 3px;
+  margin: 3px;
+}
+
+.residentEvent > .eventTitle{
+  display: flex;
+  flex-direction: column;
+  color: pink;
+}
+
+.addButton{
+  background-color: darkgreen;
+  border-color: darkgreen;
+  /* height: 100%; */
+  -webkit-box-shadow: 6px 5px 13px -2px #000000; 
+  box-shadow: 6px 5px 13px -2px #000000;
+  width: fit-content;
+}
+.aButton{
+  -webkit-box-shadow: 6px 5px 13px -2px #000000; 
+  box-shadow: 6px 5px 13px -2px #000000;
+  width: fit-content;
+}
+
+hr{
+  display: block;
+  margin-top: 0.25em;
+  margin-bottom: 0.25em;
+  margin-left: auto;
+  margin-right: auto;
+  border-style: inset;
+  border-width: 1px;
+  border-color: darkolivegreen;
+}

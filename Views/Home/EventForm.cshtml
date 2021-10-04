@@ -1,0 +1,34 @@
+@model Event
+<nav class="navbar">
+    <h1 class="display-4">U-nit!</h1>
+    <div>
+        <a href="/Dashboard" class="aButton btn btn-lg btn-success m-3">Dashboard</a>
+        <a href="/Logout" class="aButton btn btn-lg btn-danger m-3">Logout</a>
+    </div>
+</nav>
+<div class="buildInfo text-center">
+    <h1>Provide your event information:</h1>
+    <form asp-controller="Home" asp-action="EventSubmit" method="post">
+        <div class="form-group">
+            <label asp-for="Title"></label>
+            <input asp-for="Title" class="form-control">
+            <span asp-validation-for="Title" class="alert-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="EventDate"></label>
+            <input asp-for="EventDate" class="form-control">
+            <span asp-validation-for="EventDate" class="alert-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Location"></label>
+            <input asp-for="Location" class="form-control">
+            <span asp-validation-for="Location" class="alert-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Description"></label>
+            <textarea asp-for="Description" class="form-control"></textarea>
+            <span asp-validation-for="Description" class="alert-danger"></span>
+        </div>
+        <input type="submit" class="addButton btn btn-success btn-large">
+    </form>
+</div>

@@ -1,0 +1,62 @@
+@model User
+<nav class="navbar">
+    <h1 class="display-4">Welcome to U-nit!</h1>
+    <a href="/Dashboard" class="aButton btn btn-lg btn-success m-3">Dashboard</a>
+    <a href="/Logout" class="aButton btn btn-lg btn-danger m-3">Logout</a>
+    </div>
+</nav>
+<div class="pendingResident">
+    <h3>Pending Residents</h3>
+    <table class="table table-striped table-bordered text-white">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Apartment</th>
+                <th scope="col">Waiting Since</th>
+                <th scope="col">Admit</th>
+                <th scope="col">Decline</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ViewBag.AllBuildingResidents.Residents)
+            {
+                if(user.ConfirmedByAdmin != true)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>@user.AptNumber</td>
+                        <td>@user.CreatedAt</td>
+                        <td><a href="/pendingResidents/admit/@user.UserId" class="aButton btn btn-sm btn-success">Admit</a></td>
+                        <td><a href="/pendingResidents/decline/@user.UserId" class="aButton btn btn-sm btn-danger">Decline</a></td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>
+<hr>
+<div class="pendingResident">
+    <h3>Current Residents</h3>
+    <table class="table table-striped table-bordered text-white">
+        <thead>
+            <tr>
+                <th scope="col">Name</th>
+                <th scope="col">Apartment</th>
+                <th scope="col">Resident Since</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var user in ViewBag.AllBuildingResidents.Residents)
+            {
+                if(user.ConfirmedByAdmin == true)
+                {
+                    <tr>
+                        <td>@user.FirstName @user.LastName</td>
+                        <td>@user.AptNumber</td>
+                        <td>@user.UpdatedAt</td>
+                    </tr>
+                }
+            }
+        </tbody>
+    </table>
+</div>

@@ -1,0 +1,17 @@
+@model LoginUser
+    <div class="smcontainer loginRegEntry">
+        <h1 class="display-4">Login</h1>
+        <form asp-controller="Home" asp-action="CheckLogin" method="POST">
+            <div class="form-group">
+                <label asp-for="LoginEmail"></label>
+                <input asp-for="LoginEmail" class="form-control">
+                <span asp-validation-for="LoginEmail" class="alert-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="LoginPassword"></label>
+                <input asp-for="LoginPassword" class="form-control">
+                <span asp-validation-for="LoginPassword" class="alert-danger"></span>
+            </div>
+            <input type="submit" class="addButton btn btn-success btn-large">
+        </form>
+    </div>
